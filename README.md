@@ -5,9 +5,9 @@ use Example :
 
 ::
 
-    [root@host136 t1]# cat HelloWorld.py
+    [root@local t1]# cat HelloWorld.py
     print("Hello World")
 
-    [root@host136 t1]# python HelloWorld.py
+    [root@local t1]# python HelloWorld.py
     Hello World
-    [root@host136 t1]#
+    [root@local t1]#
