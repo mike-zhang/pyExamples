@@ -2,7 +2,7 @@
 python example code 
 
 use Example :   
-::      
+ 
 
     [root@local t1]# cat HelloWorld.py
     print("Hello World")
