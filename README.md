@@ -1,9 +1,8 @@
 # pyExamples
 python example code 
 
-use Example : 
-
-::
+use Example :   
+::      
 
     [root@local t1]# cat HelloWorld.py
     print("Hello World")
