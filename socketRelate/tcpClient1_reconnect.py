@@ -19,7 +19,7 @@ def main():
     
     while True :
         try :
-            msg = str(time.time()) +" (Mike_Zhang@live.com)"
+            msg = str(time.time())
             sockLocal.send(msg) 
             print "send msg ok : ",msg                
             print "recv data :",sockLocal.recv(1024)
