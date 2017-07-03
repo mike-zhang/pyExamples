@@ -1,4 +1,4 @@
-mysql-connector-python£ºÊÇMySQL¹Ù·½µÄ´¿PythonÇý¶¯£»
+mysql-connector-pythonï¼šæ˜¯MySQLå®˜æ–¹çš„çº¯Pythoné©±åŠ¨ï¼›
 
 pip install mysql-connector
 
