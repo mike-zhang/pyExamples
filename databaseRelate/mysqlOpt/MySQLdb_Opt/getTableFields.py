@@ -14,7 +14,6 @@ g_pswd = ''
 g_dbName = 'test'    
 
 def getColumName(cur, strTableName):
-    #sql2exe = "desc cti_cdr_call"
     sql2exe = "desc " + strTableName
     count = cur.execute(sql2exe)
     if not count : return
