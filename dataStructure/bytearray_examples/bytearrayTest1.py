@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 #-*- coding:utf-8 -*-
+# version : Python 2.7.13
 
 b1 = bytearray(b'123')
 b1.append(0x2a)

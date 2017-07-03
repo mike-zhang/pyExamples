@@ -1,5 +1,6 @@
 ﻿#! /usr/bin/env python
-#-*- coding : utf-8 -*-
+#-*- coding:utf-8 -*-
+# version : Python 2.7.13
 
 t1 = [5,6,2,3,1]
 

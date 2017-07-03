@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 #-*- coding:utf-8 -*-
+# version : Python 2.7.13
 
 d1 = {"a" : 1, "b" : 2}
 d2 = {"c" : 1, "d" : 3}

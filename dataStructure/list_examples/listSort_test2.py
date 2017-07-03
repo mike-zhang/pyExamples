@@ -1,5 +1,6 @@
 ﻿#! /usr/bin/env python
-#-*- coding : utf-8 -*-
+#-*- coding:utf-8 -*-
+# version : Python 2.7.13
 
 rows = [
     {"id" : 1001,'name': "user1","score" : 80},
