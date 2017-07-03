@@ -1,5 +1,5 @@
 pip install PyMySQL
 
-´¿pythonÊµÏÖµÄmysql¿â
+çº¯pythonå®žçŽ°çš„mysqlåº“
 
 https://github.com/PyMySQL/PyMySQL
