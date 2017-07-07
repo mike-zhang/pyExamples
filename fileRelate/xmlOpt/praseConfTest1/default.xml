@@ -4,7 +4,7 @@
     <smtpPort>25</smtpPort>
     <sender>test1@163.com</sender>
     <senderPasswd>test1</senderPasswd>
-    <receivers>
+    <receivers type="email">
         <user>test2@qq.com</user>
         <user>test3@qq.com</user>
     </receivers>

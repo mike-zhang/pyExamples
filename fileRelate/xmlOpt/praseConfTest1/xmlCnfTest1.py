@@ -22,22 +22,35 @@ class ConfigData():
         print self.smtpPort
         print self.sender
         print self.senderPasswd
+        print self.rcvType
         print self.receivers
- 
+     
+    def _getObjBase(self,path):
+        retobj = None
+        if self.docTree :
+            retobj = self.docTree.find(path)
+        return retobj   
+        
     def getSectiontText(self,path):
         retText = ""
-        if self.docTree :
-            objTmp = self.docTree.find(path)
-            if objTmp != None : 
-                retText = objTmp.text or ""                
-        return retText
-
-    def getReceivers(self):        
+        objTmp = self._getObjBase(path)
+        if objTmp != None :
+            retText = objTmp.text or ""
+        return retText.strip()
+      
+    def getTextAttribute(self,path,attrName):
+        retText = ""        
+        objTmp = self._getObjBase(path)
+        if objTmp != None : 
+            retText = objTmp.get(attrName,"")
+        return retText.strip()  
+        
+    def getReceivers(self,path):        
         if not self.docTree : 
             return None            
-        objTmp = self.docTree.findall("receivers/user")            
+        objTmp = self.docTree.findall(path)
         if objTmp :
-            self.receivers += [item.text for item in objTmp]            
+            self.receivers += [item.text for item in objTmp]
         return None
         
     def getSectiontInt(self,path):    
@@ -58,11 +71,12 @@ class ConfigData():
             print "%s is NOT well-formed : %s "%(self.fileName,e)
             return None
         
-        self.smtpServer = self.getSectiontText("smtpServer").strip()
+        self.smtpServer = self.getSectiontText("smtpServer")
         self.smtpPort = self.getSectiontInt("smtpPort")
         self.sender = self.getSectiontText("sender").strip()
-        self.senderPasswd = self.getSectiontText("senderPasswd").strip()        
-        self.getReceivers()
+        self.senderPasswd = self.getSectiontText("senderPasswd")
+        self.rcvType = self.getTextAttribute("receivers","type")
+        self.getReceivers("receivers/user")
         return None
 
 if __name__ == "__main__":
