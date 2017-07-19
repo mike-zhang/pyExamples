@@ -9,7 +9,7 @@ use Example :
     #-*- coding:utf-8 -*-
     # version : Python 2.7.13
 
-    print("Hello,World")
+    print("Hello,World!")
 
     (py27env) [root@local pyExamples]# python HelloWorld.py
     Hello,World
