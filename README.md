@@ -1,7 +1,7 @@
-# pyExamples
-python example code 
 
-use Example :   
+python示例代码集合，旨在提供快速可用的python代码片段。
+
+使用示例 :   
  
 
     (py27env) [root@local pyExamples]# cat HelloWorld.py
