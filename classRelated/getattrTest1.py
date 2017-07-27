@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 #-*- coding:utf-8 -*-
+# version : Python 2.7.13
 
 '''
 调用对象上的方法，方法以字符串形式给出

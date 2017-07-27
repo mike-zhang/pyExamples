@@ -1,5 +1,6 @@
 ﻿#! /usr/bin/python
 #-*- coding: utf-8 -*-
+# version : Python 2.7.13
 
 class Base():
     id = 0
