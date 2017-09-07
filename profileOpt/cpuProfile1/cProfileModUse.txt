@@ -1,0 +1,25 @@
+﻿两种使用方式：
+
+1、不修改程序
+
+分析程序：
+python -m cProfile -o test1.out test1.py
+
+查看运行结果：
+python -c "import pstats; p=pstats.Stats('test1.out'); p.print_stats()"
+
+或排序后的：
+python -c "import pstats; p=pstats.Stats('test1.out'); p.sort_stats('time').print_stats()"
+ 
+2、修改程序
+
+参考cProfileTest1.py
+
+
+结果说明：
+ncalls ： 函数的被调用次数
+tottime ：函数总计运行时间，除去函数中调用的函数运行时间
+percall ：函数运行一次的平均时间，等于tottime/ncalls
+cumtime ：函数总计运行时间，含调用的函数运行时间
+percall ：函数运行一次的平均时间，等于cumtime/ncalls
+filename:lineno(function) 函数所在的文件名，函数的行号，函数名
