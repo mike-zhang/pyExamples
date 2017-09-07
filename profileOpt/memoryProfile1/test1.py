@@ -1,7 +1,7 @@
 ﻿#! /usr/bin/env python
 #-*- coding: utf-8 -*-
 
-# use : python -m memory_profiler test2.py
+# use : python -m memory_profiler test1.py
 
 @profile
 def my_func():
