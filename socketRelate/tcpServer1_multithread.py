@@ -14,6 +14,7 @@ class ThreadedServer(object):
         self.sock.bind((self.host, self.port))
 
     def listen(self):
+        print "listen on port : %d" % self.port
         self.sock.listen(5)
         while True:
             client, address = self.sock.accept()
@@ -36,12 +37,5 @@ class ThreadedServer(object):
                 return False
 
 if __name__ == "__main__":
-    while True:
-        port_num = 12345
-        try:
-            port_num = int(port_num)
-            break
-        except ValueError:
-            pass
-
+    port_num = 12345
     ThreadedServer('',port_num).listen()
