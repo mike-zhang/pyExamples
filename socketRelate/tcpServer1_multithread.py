@@ -29,7 +29,7 @@ class ThreadedServer(object):
                 if data:                    
                     response = data
                     client.send(response)
-                    print "secndLen: ",len(data)                    
+                    print "sendLen: ",len(data)                    
                 else:
                     raise error('Client disconnected')
             except:
