@@ -4,7 +4,7 @@
 '''
 python3.5+
 
-pip3 install snaic
+pip3 install sanic
 
 压测：
 yum -y install httpd-tools
