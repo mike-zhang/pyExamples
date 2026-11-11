@@ -1,6 +1,6 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 #-*- coding:utf-8 -*-
-# version : Python 2.7.13
+# version : Python 3.11.2
 
 import socket
 import threading
@@ -14,7 +14,7 @@ class ThreadedServer(object):
         self.sock.bind((self.host, self.port))
 
     def listen(self):
-        print "listen on port : %d" % self.port
+        print("listen on port : %d" % self.port)
         self.sock.listen(5)
         while True:
             client, address = self.sock.accept()
@@ -29,7 +29,7 @@ class ThreadedServer(object):
                 if data:                    
                     response = data
                     client.send(response)
-                    print "sendLen: ",len(data)                    
+                    print("sendLen: ",len(data))                    
                 else:
                     raise error('Client disconnected')
             except:

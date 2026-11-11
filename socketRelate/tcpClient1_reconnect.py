@@ -1,6 +1,6 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 #-*- coding:utf-8 -*-
-# version : Python 2.7.13
+# version : Python 3.11.2
 
 import os,sys,time
 import socket
@@ -10,26 +10,26 @@ def doConnect(host,port):
     try :         
         sock.connect((host,port))
     except :
-        pass 
+        print("doConnect error ")
     return sock
         
 def main():   
     host,port = "127.0.0.1",12345
-    print host,port    
+    print(host,port)    
     sockLocal = doConnect(host,port)   
     
     while True :
         try :
-            msg = str(time.time())
+            msg = str(time.time()).encode()
             sockLocal.send(msg) 
-            print "send msg ok : ",msg                
-            print "recv data :",sockLocal.recv(1024)
+            print("send msg ok : ",msg)
+            print("recv data :",sockLocal.recv(1024))
         except socket.error :
-            print "\r\nsocket error,do reconnect "
+            print("\r\nsocket error,do reconnect ")
             time.sleep(3)
             sockLocal = doConnect(host,port)   
         except :
-            print '\r\nother error occur '            
+            print('\r\nother error occur ')
             time.sleep(3) 
         time.sleep(1)
     

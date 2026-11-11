@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding:utf-8 -*-
 
 import struct
@@ -12,9 +12,9 @@ def fltonl(v):
     return struct.unpack('d',s)[0]
 
 a = 123.456
-print a
+print(a)
 b = htonfl(a)
-print b , hex(b)
-print fltonl(b)
+print(b , hex(b))
+print(fltonl(b))
 
 

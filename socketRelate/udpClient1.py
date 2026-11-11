@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 #-*- coding:utf-8 -*-
 # version : Python 3.11.2
 

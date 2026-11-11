@@ -1,6 +1,6 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 #-*- coding:utf-8 -*-
-# version : Python 2.7.13
+# version : Python 3.11.2
 
 # a simple tcp server
 import socket,traceback
@@ -12,7 +12,7 @@ while True:
     try :
         connection,address = sock.accept()  
         buf = connection.recv(1024)  
-        print buf
+        print(buf)
         connection.send(buf)    
         connection.close()
     except :
