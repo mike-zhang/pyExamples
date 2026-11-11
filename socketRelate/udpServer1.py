@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 #-*- coding:utf-8 -*-
-# version : Python 2.7.13
+# version : Python 3.11.2
 
 # a simple udp server
 
@@ -13,8 +13,8 @@ s.bind(("127.0.0.1",12345))
 while True:
     try:
         message, address = s.recvfrom(1024)
-        print "Got data from", address
-        print message
+        print("Got data from", address)
+        print(message)
         s.sendto(message, address)
     except :
         traceback.print_exc()
